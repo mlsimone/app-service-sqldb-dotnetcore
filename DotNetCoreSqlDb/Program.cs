@@ -37,9 +37,12 @@ builder.Services.AddDistributedMemoryCache();
 builder.Services.AddControllersWithViews();
 
 // Add App Service logging
+// MLS I believe this reads appsettings.json!
 builder.Logging.AddAzureWebAppDiagnostics();
 
 var app = builder.Build();
+
+app.Logger.LogWarning("Starting the app");
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
