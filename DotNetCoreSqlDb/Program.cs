@@ -38,7 +38,7 @@ builder.Services.AddControllersWithViews();
 
 // Add App Service logging
 // MLS I believe this reads appsettings.json!
-builder.Logging.AddAzureWebAppDiagnostics();
+//builder.Logging.AddAzureWebAppDiagnostics();
 
 var app = builder.Build();
 
