@@ -18,7 +18,7 @@ if (builder.Environment.IsDevelopment())
 else
 {
     // get from Environment
-    azure_connection_string = builder.Configuration.GetConnectionString("AZURE_SQL_CONNECTIONSTRING"); //Environment.GetEnvironmentVariable("AZURE_SQL_CONNECTIONSTRING");
+    azure_connection_string = builder.Configuration.GetConnectionString("AZURE_SQL_CONNECTIONSTRING-password"); //Environment.GetEnvironmentVariable("AZURE_SQL_CONNECTIONSTRING");
 }
 // Uncomment one of the two lines depending on the identity type    
 SqlConnection authenticatedConnection = new SqlConnection(azure_connection_string); // system-assigned identity
